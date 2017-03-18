@@ -10,6 +10,6 @@ class IndexController extends Controller
     {
         
         
-        return view('layouts.site');
+        return view('site.index');
     }
 }
