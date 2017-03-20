@@ -12,16 +12,16 @@
     <div id='filters' class="sixteen columns">
         <ul style="padding:0">
             <li><a href="{{ route('page') }}">
-                <h5>Pages</h5>
+                    <h5>Pages</h5></a>
             </li>
             <li><a href="{{ route('portfolio') }}">
-                <h5>Portfolio</h5>
+                    <h5>Portfolio</h5></a>
             </li>
             <li><a href="{{ route('service') }}">
-                <h5>Service</h5>
+                    <h5>Service</h5></a>
             </li>
             <li><a href="{{ route('human') }}">
-                <h5>Humans</h5>
+                    <h5>Humans</h5></a>
             </li>
         </ul>
     </div>
