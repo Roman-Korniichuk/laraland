@@ -192,7 +192,7 @@
             @foreach ($humans as $k=>$human)
 
             <div class="team_area">
-                <div class="team_box wow fadeInDown delay-0{{ ($k*3 + 3) }}s">
+                <div class="team_box wow fadeInDown delay-0{{ ($k<3) ? ($k*3 + 3) : 9 }}s">
                     <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
                     {{ Html::image('assets/img/'. $human->image) }}
                     <ul>
@@ -202,9 +202,9 @@
                         <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
                     </ul>
                 </div>
-                <h3 class="wow fadeInDown delay-0{{ ($k*3 + 3) }}s">{{ $human->name }}</h3>
-                <span class="wow fadeInDown delay-0{{ ($k*3 + 3) }}s">{{ $human->position }}</span>
-                <p class="wow fadeInDown delay-0{{ ($k*3 + 3) }}s">{{ $human->text }}</p>
+                <h3 class="wow fadeInDown delay-0{{ ($k<3) ? ($k*3 + 3) : 9 }}s">{{ $human->name }}</h3>
+                <span class="wow fadeInDown delay-0{{ ($k<3) ? ($k*3 + 3) : 9 }}s">{{ $human->position }}</span>
+                <p class="wow fadeInDown delay-0{{ ($k<3) ? ($k*3 + 3) : 9 }}s">{{ $human->text }}</p>
             </div>
 
             @endforeach
