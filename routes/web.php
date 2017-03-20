@@ -23,7 +23,10 @@ Route::group([], function() {
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
     
     Route::get('/', function() {
-        
+        if (view()->exists('admin.index')) {
+            $data = ['title' => 'Admin panel'];
+            return view('admin.index', $data);
+        }
     });
     
     // admin/pages
@@ -60,6 +63,18 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
         
         //edit/2
         Route::match(['get', 'post', 'delete'], '/edit/{service}', ['uses'=>'ServicesEditController@execute', 'as'=>'servicesEdit']);
+    });
+    
+    // admin/humans
+    Route::group(['prefix'=>'humans'], function() {
+        
+        Route::get('/', ['uses'=>'HumansController@execute', 'as'=>'human']);
+        
+        //add
+        Route::match(['get', 'post'], '/add', ['uses'=>'HumansAddController@execute', 'as'=>'humansAdd']);
+        
+        //edit/2
+        Route::match(['get', 'post', 'delete'], '/edit/{human}', ['uses'=>'HumansEditController@execute', 'as'=>'humansEdit']);
     });
     
 });

@@ -18,7 +18,10 @@
                 <h5>Portfolio</h5>
             </li>
             <li><a href="{{ route('service') }}">
-                <h5>Portfolio</h5>
+                <h5>Service</h5>
+            </li>
+            <li><a href="{{ route('human') }}">
+                <h5>Humans</h5>
             </li>
         </ul>
     </div>
