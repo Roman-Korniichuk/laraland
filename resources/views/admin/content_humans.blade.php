@@ -20,7 +20,7 @@
             <tr>
                     <td>{{ $human->id }}</td>
                     <td>{!! Html::link(route('humansEdit', ['human'=>$human->id]), $human->name, ['alt'=>$human->name]) !!}</td>
-                    <td>{{ $human->alias }}</td>
+                    <td>{{ $human->position }}</td>
                     <td>{{ $human->text }}</td>
                     <td>{{ $human->created_at }}</td>
                     <td>
