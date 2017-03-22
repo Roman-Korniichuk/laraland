@@ -32,7 +32,7 @@ class PagesAddController extends Controller
                 $ext = $file->getClientOriginalExtension();
                 if (($ext == 'jpg')||($ext == 'bmp')||($ext == 'gif')) {
                     $input['image'] = $file->getClientOriginalName();
-                    $file->move(public_path() . '/assets/img/', $input['image']);
+                    $file->move(public_path('assets/img/'), $input['image']);
                     $page = new Page();
                     $page->fill($input);
                     if ($page->save()) {
