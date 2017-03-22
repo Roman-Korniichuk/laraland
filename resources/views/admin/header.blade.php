@@ -17,9 +17,6 @@
             <li><a href="{{ route('portfolio') }}">
                     <h5>Portfolio</h5></a>
             </li>
-            <li><a href="{{ route('service') }}">
-                    <h5>Service</h5></a>
-            </li>
             <li><a href="{{ route('human') }}">
                     <h5>Humans</h5></a>
             </li>
