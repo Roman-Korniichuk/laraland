@@ -52,19 +52,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
         //edit/2
         Route::match(['get', 'post', 'delete'], '/edit/{portfolio}', ['uses'=>'PortfoliosEditController@execute', 'as'=>'portfoliosEdit']);
     });
-    
-    // admin/services
-    Route::group(['prefix'=>'services'], function() {
         
-        Route::get('/', ['uses'=>'ServicesController@execute', 'as'=>'service']);
-        
-        //add
-        Route::match(['get', 'post'], '/add', ['uses'=>'ServicesAddController@execute', 'as'=>'servicesAdd']);
-        
-        //edit/2
-        Route::match(['get', 'post', 'delete'], '/edit/{service}', ['uses'=>'ServicesEditController@execute', 'as'=>'servicesEdit']);
-    });
-    
     // admin/humans
     Route::group(['prefix'=>'humans'], function() {
         
